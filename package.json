@@ -1,18 +1,19 @@
 {
   "name": "event-tracking",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple library to track events in recent history",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Donald Simpson",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^6.6.0",
     "eslint-plugin-jest": "^23.0.4",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "jsdoc": "^3.6.3"
   },
   "dependencies": {}
 }
