@@ -61,12 +61,14 @@ class EventTracker {
   }
 
   /**
-   * count - description
+   * count - Returns the count of events signaled within the last number of
+   * the parameter seconds time.
    *
    * @param  {int} seconds - (optional) Interval of event history to count.
+   * Defaults to five minutes (300 seconds).
    * @return {int} - How many events were counted during the given interval.
    */
-  count(seconds = 5) {
+  count(seconds = 300) {
     const now = Date.now();
     const ms = seconds * 1000;
     const queryAge = now - ms;
