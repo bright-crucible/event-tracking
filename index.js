@@ -78,9 +78,11 @@ class EventTracker {
           this._historyDuration / 1000
         )} seconds`
       );
-    const neoEvents = this._events.filter(eventAge => eventAge > queryAge);
+    const neoEvents = this._events.reduce((total, eventAge) => {
+      return eventAge > queryAge ? total + 1 : total;
+    }, 0);
     this.oldFlush();
-    return neoEvents.length;
+    return neoEvents;
   }
 }
 
